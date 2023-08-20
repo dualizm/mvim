@@ -1,0 +1,2 @@
+# evim
+ezeire neovim configuration
