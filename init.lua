@@ -14,6 +14,7 @@ utils.categories {
     configs = {
         "core",
         "plugin",
+        "scheme",
         "mapping",
     },
     plugins = {
@@ -34,7 +35,9 @@ utils.categories {
       -- снипеты настроить
       -- индекатор ошибок
     },
-    colorscheme = {
-        "scheme",
-    }
 }
+
+vim.o.background = "dark"
+vim.cmd([[
+    colorscheme melange
+]])

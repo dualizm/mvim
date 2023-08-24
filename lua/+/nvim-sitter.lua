@@ -3,9 +3,7 @@ local utils = require 'utils'
 utils.with_require("nvim-treesitter", function ()
     require("nvim-treesitter.configs").setup({
       ensure_installed = {
-        "c", "lua", "vim",
-        "vimdoc", "bash", "make",
-        "regex", "sql", "go"},
+        "c", "lua", "bash", "make", "go"},
       sync_install = false,
       auto_install = true,
       highlight = {
