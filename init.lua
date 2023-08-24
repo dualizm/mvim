@@ -36,8 +36,3 @@ utils.categories {
       -- индекатор ошибок
     },
 }
-
-vim.o.background = "dark"
-vim.cmd([[
-    colorscheme melange
-]])
