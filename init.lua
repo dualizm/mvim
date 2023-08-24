@@ -14,7 +14,6 @@ utils.categories {
     configs = {
         "core",
         "plugin",
-        "scheme",
         "mapping",
     },
     plugins = {
@@ -34,5 +33,8 @@ utils.categories {
       -- индентация и формат в файлах
       -- снипеты настроить
       -- индекатор ошибок
+    },
+    colorscheme = {
+        "scheme",
     }
 }

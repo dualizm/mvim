@@ -14,4 +14,12 @@ function utils.categories(categories)
     end
 end
 
+function utils.with_require(plugin_name, fcall)
+    local ok, _ = pcall(require, plugin_name)
+    if ok then
+        fcall()
+    end
+end
+
+
 return utils

@@ -1,14 +1,9 @@
+local utils = require 'utils'
+
 local bind = vim.api.nvim_set_keymap
 local vbind = vim.keymap.set
 
 vim.g.mapleader = " "
-
-local function with_require(plugin_name, fcall)
-    local ok, _ = pcall(require, plugin_name)
-    if ok then
-        fcall()
-    end
-end
 
 local function do_binds(binds, fbind, opt)
     for _,bnd in ipairs(binds) do
@@ -39,17 +34,17 @@ do_binds({
 }, bind)
 
 -- file explorer
-with_require("nvim-tree", function()
+utils.with_require("nvim-tree", function()
     do_binds({
         {"n", "<leader>t", ":NvimTreeToggle<cr>"},
     }, vbind)
 end)
 
 -- hop
-with_require("hop", function()
+utils.with_require("hop", function()
     local hop = require'hop'
     local directions = require'hop.hint'.HintDirection
-    
+
     do_binds({
         {"", "f", function()
             hop.hint_char1 { 
@@ -76,7 +71,7 @@ with_require("hop", function()
 end)
 
 -- telescope
-with_require("telescope", function()
+utils.with_require("telescope", function()
     local builtin = require('telescope.builtin');
     do_binds({
         {"n", "<leader>ff", builtin.find_files},
