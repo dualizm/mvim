@@ -4,35 +4,30 @@
 -- | Author: ezeire
 -- | Description:
 -- | [[
--- |	Config file for snvim
+-- |	Config file for evim
 -- | ]]
 -- |================================================================|
 
 local utils = require "utils"
 
-utils.categories {
-    configs = {
-        "core",
-        "plugin",
-        "scheme",
-        "mapping",
-    },
-    plugins = {
-      "lualine",
-      "nvim-comment",
-      "neoscroll",
-      "beacon",
-      "hop",
-      "nvim-tree",
-      "nvim-sitter",
-      "telescope",
-      "lsp",
-      "cmp",
-      -- поисковик внутри файлов!
-      -- интерфейс для git
-      -- neomake для выполнения билдов
-      -- индентация и формат в файлах
-      -- снипеты настроить
-      -- индекатор ошибок
-    },
+require("core")
+require("plugin")
+require("scheme")
+require("mapping")
+
+utils.require_plugins {
+    "lualine",
+    "nvim-comment",
+    "neoscroll",
+    "beacon",
+    "hop",
+    "nvim-tree",
+    "nvim-sitter",
+    "telescope",
+    "lsp",
+    "cmp",
+    -- neomake для выполнения билдов
+    -- индентация и формат в файлах
+    -- снипеты настроить
+    -- индекатор ошибок
 }
