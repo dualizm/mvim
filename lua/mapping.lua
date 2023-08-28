@@ -104,7 +104,7 @@ function on_attach(client, bufnr)
         {"n", "<leader>wl", function()
           print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end},
-        
+
         {"n", "<leader>D", vim.lsp.buf.type_definition},
         {"n", "<leader>rn", vim.lsp.buf.rename},
         {"n", "<leader>ca", vim.lsp.buf.code_action},
@@ -112,3 +112,5 @@ function on_attach(client, bufnr)
         {"n", "<leader>f", vim.lsp.buf.formatting},
     }, vbind, bufopts)
 end
+
+

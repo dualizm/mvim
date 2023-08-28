@@ -36,48 +36,41 @@ vim.cmd([[
 ]])
 
 return require("packer").startup(function()
-  -- + plugin manager
-    use "wbthomason/packer.nvim"
-  -- + colorschemes
-    use "savq/melange-nvim"
-  -- + status line
-    use "nvim-lualine/lualine.nvim"
-  -- + commenter
-    use "terrortylor/nvim-comment"
-  -- + file manager
-    use "nvim-tree/nvim-tree.lua"
-  -- + sitter
-    use { "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
-    }
-  -- + motions
-    use "phaazon/hop.nvim"
-  -- + find, filter, preview, pick.
-    use { "nvim-telescope/telescope.nvim",
-        requires = {
-            "nvim-lua/plenary.nvim"
-        }
-    }
-  -- + lsp
-    use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig"
-    }
-  -- + completion
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-nvim-lsp"
-    use "L3MON4D3/LuaSnip"
-    use "saadparwaiz1/cmp_luasnip"
-    use "rafamadriz/friendly-snippets"
+    -- + plugin manager
+      use "wbthomason/packer.nvim"
+    -- + status line
+      use "nvim-lualine/lualine.nvim"
+    -- + commenter
+      use "terrortylor/nvim-comment"
+    -- + file manager
+      use "nvim-tree/nvim-tree.lua"
+    -- + sitter
+      use "nvim-treesitter/nvim-treesitter"
+    -- + motions
+      use "phaazon/hop.nvim"
+    -- + find, filter, preview, pick.
+      use { "nvim-telescope/telescope.nvim",
+          requires = {
+              "nvim-lua/plenary.nvim"
+          }
+      }
+    -- + lsp
+      use {
+          "williamboman/mason.nvim",
+          "williamboman/mason-lspconfig.nvim",
+          "neovim/nvim-lspconfig"
+      }
+    -- + completion
+      use "hrsh7th/nvim-cmp"
+      use "hrsh7th/cmp-nvim-lsp"
+      use "L3MON4D3/LuaSnip"
+      use "saadparwaiz1/cmp_luasnip"
+      use "rafamadriz/friendly-snippets"
 
--- misc
-  -- + scroll
-    use "karb94/neoscroll.nvim"
-  -- + flash cursor
-    use "rainbowhxch/beacon.nvim"
+    -- + scroll 
+      use "karb94/neoscroll.nvim"
 
-    if packer_bootstrap then
-        require("packer").sync()
-    end
+  if packer_bootstrap then
+      require("packer").sync()
+  end
 end)
