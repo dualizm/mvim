@@ -14,7 +14,7 @@ minimum configuration of neovim to work
 * neovim9.0+
 
 ### Install
-    git clone https://github.com/ezeire/evim.git ~/.config/nvim
+    git clone https://github.com/ezeire/mvim.git ~/.config/nvim
 
 ## Plugins
 * lualine
