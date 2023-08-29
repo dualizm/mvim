@@ -3,7 +3,7 @@ local utils = require "utils"
 utils.with_require("mason", function ()
     require("mason").setup()
 
-    local ensure_installed = { "lua_ls", "clangd" }
+    local ensure_installed = { "lua_ls", "clangd", "tsserver" }
     require("mason-lspconfig").setup({
       ensure_installed = ensure_installed
     })

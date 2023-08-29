@@ -25,4 +25,5 @@ utils.require_plugins {
     "telescope",
     "lsp",
     "cmp",
+    "prettier",
 }

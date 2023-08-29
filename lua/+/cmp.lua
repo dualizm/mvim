@@ -3,6 +3,7 @@ local utils = require "utils"
 
 utils.with_require("cmp", function ()
     local cmp = require "cmp"
+    local lspkind = require "lspkind"
 
     require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -25,6 +26,13 @@ utils.with_require("cmp", function ()
         }, {
           { name = "buffer" },
         }),
+        formatting = {
+            format = lspkind.cmp_format {
+                mode = "symbol",
+                maxwidth = 50,
+                ellipsis_char = "...",
+            }
+        }
     })
 end)
 

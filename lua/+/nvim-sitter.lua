@@ -5,6 +5,9 @@ utils.with_require("nvim-treesitter", function ()
       ensure_installed = { "c", "lua" },
       sync_install = false,
       auto_install = true,
+      autotag = {
+          enable = true,
+      },
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,

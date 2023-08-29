@@ -7,7 +7,7 @@ vim.g.mapleader = " "
 
 local function do_binds(binds, fbind, opt)
     for _,bnd in ipairs(binds) do
-        fbind(bnd[1], bnd[2], bnd[3], opt or { noremap = true, silent = true}) 
+        fbind(bnd[1], bnd[2], bnd[3], opt or { noremap = true, silent = true})
     end
 end
 
@@ -112,5 +112,3 @@ function on_attach(client, bufnr)
         {"n", "<leader>f", vim.lsp.buf.formatting},
     }, vbind, bufopts)
 end
-
-
